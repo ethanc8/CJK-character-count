@@ -126,10 +126,19 @@ Please install [latest version of Python 3](https://www.python.org/downloads/).
 请先安装[最新版本的 Python 3](https://www.python.org/downloads/)。
 
 ### Dependencies 安装依赖模块
-```
+```bash
 pip3 install fonttools
 pip3 install pyglet==1.*
 pip3 install pyinstaller==5.*
+```
+
+Alternatively, if you use Conda,
+
+```bash
+conda env create -f environment.yml
+conda activate CJK-character-count
+# To update the environment:
+conda env update -f environment.yml
 ```
 
 ### Building software 构建软件
@@ -137,7 +146,7 @@ pip3 install pyinstaller==5.*
 Download the required `.spec` files from [release](https://github.com/NightFurySL2001/CJK-character-count/releases/latest).
 
 请从[发布页](https://github.com/NightFurySL2001/CJK-character-count/releases/latest)下载需要的 `.spec` 文件。
-```
+```cmd
 // To build single language
 pyinstaller main.spec
 pyinstaller main-zhs.spec
@@ -145,6 +154,28 @@ pyinstaller main-zht.spec
 
 // To build full folder, use the provided .bat file
 .\build.bat
+```
+
+```bash
+# To build single language
+pyinstaller main.spec
+pyinstaller main-zhs.spec
+pyinstaller main-zht.spec
+
+# To build full folder, use the provided .sh file
+./build.sh
+```
+
+## Run
+
+```bash
+dist/CJK-character-count-vX.XX/main
+```
+
+## Development run
+
+```bash
+python3 main.py
 ```
 
 ## To-do 待办事项
